@@ -220,6 +220,88 @@ h2 {
     margin-bottom: 15px;
 }
 
+/*parte del carrusel*/
+#carouselExampleCaptions {
+    max-width: 1200px;
+
+    margin: 40px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/*Imágenes del carrusel */
+#carouselExampleCaptions .carousel-inner img {
+    height: 550px;
+    object-fit: cover;
+}
+
+
+/*Esta es la parte de los puntos*/
+.carousel-indicators .active {
+    background-color: #0d6efd;
+    width: 14px;
+    height: 14px;
+}
+
+/* las flechas de pasar el carrusel*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* ----- Transición de los slides ----- */
+.carousel-item {
+    transition: transform 0.9s ease;
+}
+
+/* Es la manera de modificar el texto de las imagenes*/
+.carousel-caption {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.1));
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.carousel-caption h5 {
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Manera responsiva*/
+@media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-inner img {
+        height: 350px;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
 
 
 
