@@ -52,11 +52,11 @@ function container_tarjetas() {
     container_tarjetas.appendChild(tarjeta_productos(producto7.getNombre(),producto7.getDescripcion(),producto7.getPrecio(),producto7.getImagen()));
     container_tarjetas.appendChild(tarjeta_productos(producto8.getNombre(),producto8.getDescripcion(),producto8.getPrecio(),producto8.getImagen()));
     container_tarjetas.appendChild(tarjeta_productos(producto9.getNombre(),producto9.getDescripcion(),producto9.getPrecio(),producto9.getImagen()));
-
-
     return container_tarjetas;
 
 }
+
+
 
 //Se crea la tarjeta de productos y 
 function tarjeta_productos(nombre, descripcion, precio, img) {
