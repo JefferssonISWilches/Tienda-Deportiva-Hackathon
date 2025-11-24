@@ -42,11 +42,7 @@ const producto9 = new Productos("")
 function container_tarjetas() {
     const container_tarjetas = document.createElement("div");
     container_tarjetas.classList.add("container-tarjetas");
-    container_tarjetas.style.width = "90%";
-    container_tarjetas.style.height = "300px"
-    container_tarjetas.style.border = "2px solid #e70000ff";
-    container_tarjetas.style.display = "flex";
-    container_tarjetas.style.padding = "15px";
+   
     container_tarjetas.appendChild(tarjeta_productos("juguete", "carrito de color rojo", 20));
     return container_tarjetas;
 
@@ -58,11 +54,6 @@ function tarjeta_productos(nombre, descripcion, precio, img) {
     //container de la tarjeta
     const tarjeta_productos = document.createElement("div");
     tarjeta_productos.classList.add("tarjeta-producto");
-    tarjeta_productos.style.display = "flex";
-    tarjeta_productos.style.flexFlow = "column";
-    tarjeta_productos.style.justifyContent = "top";
-    tarjeta_productos.style.width = "20%";
-    tarjeta_productos.style.border = "2px solid #e70000ff";
 
     //Imagen
     const imagen_producto = document.createElement("img");
