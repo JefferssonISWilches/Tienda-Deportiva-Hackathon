@@ -7,19 +7,223 @@
     background: #fff;
     border-bottom: 1px solid #ddd;
 }
+
 .header-nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
 }
+
 /*Boton hamburguesa DESAPARACE*/
 .menu-btn {
     font-size: 26px;
     background: none;
     border: none;
     cursor: pointer;
-    display: none; 
+    display: none;
 }
+
+/*Parte de la imagen en el dispositivo*/
+/* =========================== */
+/*      ESTILOS GENERALES      */
+/* =========================== */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f3f3f3;
+    color: #333;
+}
+
+/* =========================== */
+/*          HEADER             */
+/* =========================== */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logo h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.header-nav ul li a:hover {
+    color: blue;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Acciones */
+.header-actions svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-actions svg:hover {
+    color: blue;
+    transform: scale(1.1);
+}
+
+/*imagen presentacion*/
+
+.imagenPresentacion {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.imagenDeportista {
+    width: 100%;
+    max-width: 1100px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/*Tarjeta producto*/
+#tarjeta-productos-js {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container-tarjetas {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: auto;
+    padding: 15px;
+    background: white;
+    border: 2px solid;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease-in-out;
+}
+
+.container-tarjetas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjeta creada por JS */
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #ddd;
+}
+
+.nombre-articulo {
+    margin: 8px 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.descripcion-producto {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #555;
+    padding: 15px;
+    margin: 4px 0;
+}
+
+.precio-preducto {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 6px 0;
+
+}
+
+
+.agregar-carrito {
+    border: none;
+    background: #333;
+    padding: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.agregar-carrito:hover {
+    background: blue;
+}
+
+
+#carrito {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-carrito {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
 /*Footer*/
 .footer-main {
     margin-top: 40px;
@@ -28,12 +232,14 @@
     padding: 30px 20px;
     text-align: center;
 }
+
 .footer-links a {
     text-decoration: none;
     color: #bbb;
     margin: 0 10px;
     font-size: 14px;
 }
+
 /*RESPONSIVE*/
 /*Moviles */
 @media (max-width: 600px) {
@@ -41,42 +247,50 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     /*Mostrar botón hamburguesa APARARECE*/
     .menu-btn {
         display: block;
     }
+
     /*Ocultar menu*/
     .header-nav {
         display: none;
         width: 100%;
     }
+
     .header-nav ul {
         flex-direction: column;
         text-align: left;
         gap: 15px;
         padding: 15px 0;
     }
+
     /*Mostrar menu*/
     .header-nav.show {
         display: block;
     }
+
     .header-actions {
         display: flex;
         justify-content: center;
         width: 100%;
         margin-left: 10px;
     }
+
     .footer-links a {
         display: block;
         margin: 8px 0;
     }
-    
+
 }
+
 /*Tablets*/
 @media (min-width: 601px) and (max-width: 900px) {
     .header-nav ul {
         gap: 18px;
     }
+
     .header-actions a {
         margin-left: 10px;
     }
