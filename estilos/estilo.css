@@ -1,0 +1,83 @@
+/*Header*/
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+/*Boton hamburguesa DESAPARACE*/
+.menu-btn {
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; 
+}
+/*Footer*/
+.footer-main {
+    margin-top: 40px;
+    background: #222;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #bbb;
+    margin: 0 10px;
+    font-size: 14px;
+}
+/*RESPONSIVE*/
+/*Moviles */
+@media (max-width: 600px) {
+    .header-main {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /*Mostrar botón hamburguesa APARARECE*/
+    .menu-btn {
+        display: block;
+    }
+    /*Ocultar menu*/
+    .header-nav {
+        display: none;
+        width: 100%;
+    }
+    .header-nav ul {
+        flex-direction: column;
+        text-align: left;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    /*Mostrar menu*/
+    .header-nav.show {
+        display: block;
+    }
+    .header-actions {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 10px;
+    }
+    .footer-links a {
+        display: block;
+        margin: 8px 0;
+    }
+    
+}
+/*Tablets*/
+@media (min-width: 601px) and (max-width: 900px) {
+    .header-nav ul {
+        gap: 18px;
+    }
+    .header-actions a {
+        margin-left: 10px;
+    }
+}

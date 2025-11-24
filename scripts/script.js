@@ -1,4 +1,10 @@
 
+//Click Hamburguesa despleguie 
+const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
 
 document.body.style.margin = "0";
 
